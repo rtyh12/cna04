@@ -1,0 +1,47 @@
+\documentclass {article}
+\usepackage{amsmath}
+\setlength{\parindent}{0cm}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[margin=1.5in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\textbf{Complex Network Analysis} \\ Assignment 3\\}
+\rhead{Maria Kagkeli \\ Maria Regina Lily \\ Mihai Verzan}
+\headheight 10pc
+\voffset -10pc
+
+\begin{document}
+
+
+
+% problem 1
+\section{Power Laws}
+
+\subsection{}
+(a) $ \to $ not scale-free, because the plot is curved, therefore $ \log p_k $ does not depend linearly on $ \log k $.
+
+(b) $ \to $ scale-free, because $ \log p_k $ depends linearly on $ \log k $ (the plot is approximately a straight line).
+
+\subsection{}
+$ \log_{10} p_k \sim - \gamma \cdot log_{10} k \Rightarrow
+  \gamma = - \frac{ \log_{10} p_k }{ \log_{10} k } $. 
+Sample several points on the graph and estimate the values in those points, then plug them in the formula:
+
+\begin{itemize}
+  \item $ k = 10 $, $ p_k = 10^{-2} \Rightarrow \gamma = 2 $
+  \item $ k = 2  $, $ p_k = 10^{-1} \Rightarrow \gamma = 3.321 $
+  \item $ k = 50 $, $ p_k = 10^{-3} \Rightarrow \gamma = 1.765 $
+\end{itemize}
+
+We can estimate $ \gamma $ to be around 2.
+
+\subsection{}
+$ \gamma = 1 + N[\sum^N_{i=1} \ln \frac{ K_i }{ K_{min}-\frac{1}{2} }] = 1.756 $, $ \sigma = 0.16913 $ (values calculated using a Python script. See 4-1.ipynb).
+
+\newpage
+
+\end{document}
